@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SOLID._3._LSP
+﻿namespace SOLID._3._LSP
 {
     class Square : Rectangle
     {
