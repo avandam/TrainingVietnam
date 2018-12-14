@@ -15,13 +15,13 @@
             Balance = 0;
         }
 
-        public void TransferMoneyToAccount(Account otherAccount, double amount)
+        public void TransferMoneyToAccount(double amount, Account targetAccount)
         {
-            otherAccount.ReceiveMoneyFromAccount(amount);
+            targetAccount.ReceiveMoneyFromAccount(amount, this);
             Balance -= amount;
         }
 
-        public void ReceiveMoneyFromAccount(double amount)
+        public void ReceiveMoneyFromAccount(double amount, Account sourceAccount)
         {
             Balance += amount;
         }

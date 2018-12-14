@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>110</y>
+      <w>140</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>GumballDispenser
+--
+--
+InsertQuarter()
+EjectQuarter()
+TurnCrank()
+Refill()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>510</x>
+      <y>110</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/State/
+--
+--
+/InsertQuarter()/
+/EjectQuarter()/
+/TurnCrank()/
+/Dispense()/
+/Refill()/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>140</y>
+      <w>260</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>370</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>HasQuarterState
+--
+--
+InsertQuarter()
+EjectQuarter()
+TurnCrank()
+Dispense()
+Refill()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>370</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>NoQuarterState
+--
+--
+InsertQuarter()
+EjectQuarter()
+TurnCrank()
+Dispense()
+Refill()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>220</y>
+      <w>120</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>100.0;10.0;100.0;70.0;10.0;70.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>320</x>
+      <y>220</y>
+      <w>270</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;70.0;10.0;70.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>370</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>SoldOutState
+--
+--
+InsertQuarter()
+EjectQuarter()
+TurnCrank()
+Dispense()
+Refill()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>370</y>
+      <w>130</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>SoldState
+--
+--
+InsertQuarter()
+EjectQuarter()
+TurnCrank()
+Dispense()
+Refill()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>220</y>
+      <w>130</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;110.0;70.0;110.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>220</y>
+      <w>300</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0;280.0;70.0;280.0;150.0</additional_attributes>
+  </element>
+</diagram>

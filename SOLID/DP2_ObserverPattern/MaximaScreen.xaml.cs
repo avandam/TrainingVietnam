@@ -20,9 +20,9 @@ namespace WeatherStation
     /// </summary>
     public partial class MaximaScreen : UserControl
     {
-        private readonly List<int> temperatures = new List<int>();
-        private readonly List<int> humidities = new List<int>();
-        private readonly List<int> pressures = new List<int>();
+        private int maxTemperature = int.MinValue;
+        private int maxHumidity = int.MinValue;
+        private int maxPressure = int.MinValue;
 
         public MaximaScreen()
         {
@@ -31,13 +31,23 @@ namespace WeatherStation
 
         public void Update(int temperature, int humidity, int pressure)
         {
-            temperatures.Add(temperature);
-            humidities.Add(humidity);
-            pressures.Add(pressure);
+            if (maxTemperature < temperature)
+            {
+                maxTemperature = temperature;
+                LblMaximumTemperature.Content = $"Temperature: {maxTemperature}";
+            }
 
-            LblMaximumTemperature.Content = $"Temperature: {temperatures.Max()}";
-            LblMaximumHumidity.Content = $"Humidity: {humidities.Max()}";
-            LblMaximumPressure.Content = $"Pressure: {pressures.Max()}";
+            if (maxHumidity < humidity)
+            {
+                maxHumidity = humidity;
+                LblMaximumHumidity.Content = $"Humidity: {maxHumidity}";
+            }
+
+            if (maxPressure < pressure)
+            {
+                maxPressure = pressure;
+                LblMaximumPressure.Content = $"Pressure: {maxPressure}";
+            }
         }
 
     }

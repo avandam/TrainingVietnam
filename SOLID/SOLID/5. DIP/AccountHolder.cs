@@ -16,7 +16,7 @@
 
         public void Transfer(double amount, Account otherAccount)
         {
-            account.TransferMoneyToAccount(otherAccount, amount);
+            account.TransferMoneyToAccount(amount, otherAccount);
         }
     }
 }

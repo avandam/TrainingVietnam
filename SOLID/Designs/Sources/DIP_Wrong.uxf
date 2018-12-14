@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>20</y>
+      <w>400</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>AccountHolder
+--
+
+--
+Deposit(amount: Double)
+Transfer(amount: Double, targetAccount: String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>290</y>
+      <w>420</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>BankAccount
+--
+Name: String
+Address: String
+AccountNumber: String
+Balance: Double
+--
+TransferMoney(amount: Double, targetAccount: BankAccount)
+ReceiveMoney(amount: Double, sourceAccount: BankAccount)
+DepositMoney(amount: Double)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>100</y>
+      <w>80</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+r1=account</panel_attributes>
+    <additional_attributes>10.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
