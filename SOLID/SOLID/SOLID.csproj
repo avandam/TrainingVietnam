@@ -53,9 +53,13 @@
     <Compile Include="4. ISP\AccountHolder.cs" />
     <Compile Include="4. ISP\Bank.cs" />
     <Compile Include="4. ISP\BankAccount.cs" />
+    <Compile Include="4. ISP\IBankAccountBank.cs" />
+    <Compile Include="4. ISP\IBankAccountHolder.cs" />
+    <Compile Include="4. ISP\IBankAccountShop.cs" />
     <Compile Include="4. ISP\Shop.cs" />
     <Compile Include="5. DIP\AccountHolder.cs" />
     <Compile Include="5. DIP\Account.cs" />
+    <Compile Include="5. DIP\IAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

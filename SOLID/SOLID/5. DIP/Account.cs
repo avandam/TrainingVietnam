@@ -1,6 +1,6 @@
 ﻿namespace SOLID._5._DIP
 {
-    public class Account
+    public class Account : IAccount
     {
         public string Name { get; private set; }
         public string Address { get; private set; }

@@ -1,6 +1,7 @@
 ﻿namespace SOLID._2._OCP
 {
-    class Room
+    abstract class Room
     {
+        public abstract double ComputeArea();
     }
 }

@@ -13,21 +13,7 @@ namespace SOLID._2._OCP
 
             foreach (Room room in rooms)
             {
-                if (room is SquareRoom)
-                {
-                    SquareRoom squareRoom = room as SquareRoom;
-                    totalArea += squareRoom.Length * squareRoom.Length;
-                }
-                else if (room is RectangleRoom)
-                {
-                    RectangleRoom rectangleRoom = room as RectangleRoom;
-                    totalArea += rectangleRoom.Length * rectangleRoom.Width;
-                }
-                else if (room is CircularRoom)
-                {
-                    CircularRoom circularRoom = room as CircularRoom;
-                    totalArea += circularRoom.Radius * circularRoom.Radius * Math.PI;
-                }
+                totalArea += room.ComputeArea();
             }
 
             return totalArea;

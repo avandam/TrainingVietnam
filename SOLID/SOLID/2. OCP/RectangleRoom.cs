@@ -10,5 +10,10 @@
             Length = length;
             Width = width;
         }
+
+        public override double ComputeArea()
+        {
+            return Length * Width;
+        }
     }
 }

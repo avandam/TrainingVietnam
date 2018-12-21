@@ -2,7 +2,7 @@
 {
     class AccountHolder
     {
-        private Account account;
+        private IAccount account;
 
         public AccountHolder()
         {

@@ -5,7 +5,7 @@ namespace SOLID._4._ISP
 {
     class Bank
     {
-        List<BankAccount> accounts = new List<BankAccount>();
+        List<IBankAccountBank> accounts = new List<IBankAccountBank>();
 
         public Bank()
         {

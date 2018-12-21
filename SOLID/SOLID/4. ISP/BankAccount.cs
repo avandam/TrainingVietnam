@@ -1,6 +1,6 @@
 ﻿namespace SOLID._4._ISP
 {
-    public class BankAccount
+    public class BankAccount : IBankAccountHolder, IBankAccountBank, IBankAccountShop
     {
         public string Name { get; private set; }
         public string Address { get; private set; }

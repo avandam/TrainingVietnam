@@ -8,5 +8,10 @@
         {
             Length = length;
         }
+
+        public override double ComputeArea()
+        {
+            return Length * Length;
+        }
     }
 }

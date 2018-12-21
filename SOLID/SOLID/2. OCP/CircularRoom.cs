@@ -1,4 +1,6 @@
-﻿namespace SOLID._2._OCP
+﻿using System;
+
+namespace SOLID._2._OCP
 {
     class CircularRoom : Room
     {
@@ -10,5 +12,9 @@
         }
 
 
+        public override double ComputeArea()
+        {
+            return Radius * Radius * Math.PI;
+        }
     }
 }

@@ -2,7 +2,7 @@
 {
     class Shop
     {
-        public void CardTransaction(BankAccount account, double amount)
+        public void CardTransaction(IBankAccountShop account, double amount)
         {
             account.PayByCard(amount);
         }
