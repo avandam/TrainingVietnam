@@ -19,13 +19,13 @@ namespace WeatherStation
     /// <summary>
     /// Interaction logic for MaximaScreen.xaml
     /// </summary>
-    public partial class MaximaScreen : UserControl, IObserver
+    public partial class MinimumScreen : UserControl, IObserver
     {
-        private int maxTemperature = int.MinValue;
-        private int maxHumidity = int.MinValue;
-        private int maxPressure = int.MinValue;
+        private int maxTemperature = int.MaxValue;
+        private int maxHumidity = int.MaxValue;
+        private int maxPressure = int.MaxValue;
 
-        public MaximaScreen(ISubject subject)
+        public MinimumScreen(ISubject subject)
         {
             InitializeComponent();
             subject.Attach(this);
@@ -33,19 +33,19 @@ namespace WeatherStation
 
         public void Update(int temperature, int humidity, int pressure)
         {
-            if (maxTemperature < temperature)
+            if (maxTemperature > temperature)
             {
                 maxTemperature = temperature;
                 LblMaximumTemperature.Content = $"Temperature: {maxTemperature}";
             }
 
-            if (maxHumidity < humidity)
+            if (maxHumidity > humidity)
             {
                 maxHumidity = humidity;
                 LblMaximumHumidity.Content = $"Humidity: {maxHumidity}";
             }
 
-            if (maxPressure < pressure)
+            if (maxPressure > pressure)
             {
                 maxPressure = pressure;
                 LblMaximumPressure.Content = $"Pressure: {maxPressure}";

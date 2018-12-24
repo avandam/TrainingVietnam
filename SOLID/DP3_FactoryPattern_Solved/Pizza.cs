@@ -1,11 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DP3_FactoryPattern
+namespace DP3_FactoryPattern_Solved
 {
+    enum PizzaType
+    {
+        Cheese,
+        Clam,
+        Pepperoni, 
+        Vegetarian
+    }
+
     abstract class Pizza
     {
         public virtual void Prepare()

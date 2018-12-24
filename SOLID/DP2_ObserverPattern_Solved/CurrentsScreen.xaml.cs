@@ -12,17 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DP2_ObserverPattern_Solved;
 
 namespace WeatherStation
 {
     /// <summary>
     /// Interaction logic for CurrentsScreen.xaml
     /// </summary>
-    public partial class CurrentsScreen : UserControl
+    public partial class CurrentsScreen : UserControl, IObserver
     {
-        public CurrentsScreen()
+        public CurrentsScreen(ISubject subject)
         {
             InitializeComponent();
+            subject.Attach(this);
         }
 
         public void Update(int temperature, int humidity, int pressure)

@@ -6,6 +6,8 @@ namespace DP4_FacadePattern_Solved
     {
         static void Main(string[] args)
         {
+            IHomeTheaterFacade homeTheaterFacade = new HomeTheaterFacade();
+
             Amplifier amp = new Amplifier("Top-O-Line Amplifier");
             Tuner tuner = new Tuner("Top-O-Line AM/FM Tuner", amp);
             DvdPlayer dvd = new DvdPlayer("Top-O-Line DVD Player", amp);
@@ -13,15 +15,9 @@ namespace DP4_FacadePattern_Solved
             Television television = new Television("Theater Screen");
 
             Console.WriteLine("Start watching movie 'The Avengers'");
-            television.On();
-            television.WideScreenMode();
-            amp.On();
-            amp.SetDvd(dvd);
-            amp.SetSurroundSound();
-            amp.SetVolume(5);
-            dvd.On();
-            dvd.Play("The Avengers");
+            homeTheaterFacade.WatchMovie();
 
+            // TODO: Fix those
             Console.WriteLine();
             Console.WriteLine("End movie");
             television.Off();
@@ -61,5 +57,6 @@ namespace DP4_FacadePattern_Solved
 
             Console.Read();
         }
+
     }
 }

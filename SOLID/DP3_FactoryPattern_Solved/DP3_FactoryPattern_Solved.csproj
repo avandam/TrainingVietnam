@@ -46,6 +46,7 @@
     <Compile Include="ClamPizza.cs" />
     <Compile Include="PepperoniPizza.cs" />
     <Compile Include="Pizza.cs" />
+    <Compile Include="PizzaFactory.cs" />
     <Compile Include="PizzaStore.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

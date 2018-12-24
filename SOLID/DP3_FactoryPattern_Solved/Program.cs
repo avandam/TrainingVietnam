@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DP3_FactoryPattern
+namespace DP3_FactoryPattern_Solved
 {
     class Program
     {
@@ -12,9 +8,9 @@ namespace DP3_FactoryPattern
         {
             PizzaStore pizzaStore = new PizzaStore();
 
-            pizzaStore.OrderPizza("Cheese");
+            pizzaStore.OrderPizza(PizzaType.Cheese);
             Console.WriteLine(string.Empty);
-            pizzaStore.OrderPizza("Vegetarian");
+            pizzaStore.OrderPizza(PizzaType.Vegetarian);
 
             Console.Read();
         }

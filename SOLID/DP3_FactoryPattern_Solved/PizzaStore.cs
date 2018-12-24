@@ -1,37 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DP3_FactoryPattern
+namespace DP3_FactoryPattern_Solved
 {
     class PizzaStore
     {
-        public Pizza OrderPizza(string type)
+        public Pizza OrderPizza(PizzaType type)
         {
-            Pizza pizza;
-
-            if (type == "Cheese")
-            {
-                pizza = new CheesePizza();
-            }
-            else if (type == "Clam")
-            {
-                pizza = new ClamPizza();
-            }
-            else if (type == "Pepperoni")
-            {
-                pizza = new PepperoniPizza();
-            }
-            else if (type == "Vegetarian")
-            {
-                pizza = new VegetarianPizza();
-            }
-            else
-            {
-                throw new Exception("Pizza type does not exist");
-            }
+            Pizza pizza = PizzaFactory.GetSpecificPizza(type);
 
             pizza.Prepare();
             pizza.Bake();

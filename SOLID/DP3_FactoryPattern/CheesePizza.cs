@@ -18,10 +18,10 @@ namespace DP3_FactoryPattern
             Console.WriteLine("Cheese specific baking technique.");
         }
 
-        public override void Cut()
-        {
-            Console.WriteLine("Cheese specific cutting technique.");
-        }
+        //public override void Cut()
+        //{
+        //    Console.WriteLine("Cheese specific cutting technique.");
+        //}
 
         public override void Box()
         {

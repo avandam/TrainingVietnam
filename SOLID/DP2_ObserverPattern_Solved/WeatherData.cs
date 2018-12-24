@@ -1,20 +1,18 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Windows.Documents;
+using DP2_ObserverPattern_Solved;
 
 namespace WeatherStation
 {
-    class WeatherData
+    class WeatherData : ISubject
     {
-        private readonly CurrentsScreen currents;
-        private readonly AveragesScreen averages;
-        private readonly MaximaScreen maxima;
+        private List<IObserver> observers = new List<IObserver>();
 
         private readonly Random generator = new Random();
 
-        public WeatherData(CurrentsScreen currents, AveragesScreen averages, MaximaScreen maxima)
+        public WeatherData()
         {
-            this.currents = currents;
-            this.averages = averages;
-            this.maxima = maxima;
         }
 
         public void UpdateWeatherData()
@@ -23,9 +21,25 @@ namespace WeatherStation
             int humidity = generator.Next(20, 100);
             int pressure = generator.Next(950, 1050);
 
-            currents.Update(temperature, humidity, pressure);
-            averages.Update(temperature, humidity, pressure);
-            maxima.Update(temperature, humidity, pressure);
+            Notify(temperature, humidity, pressure);
+        }
+
+        public void Attach(IObserver observer)
+        {
+            observers.Add(observer);
+        }
+
+        public void Detach(IObserver observer)
+        {
+            observers.Remove(observer);
+        }
+
+        public void Notify(int temperature, int humidity, int pressure)
+        {
+            foreach (IObserver observer in observers)
+            {
+                observer.Update(temperature, humidity, pressure);
+            }
         }
     }
 }
