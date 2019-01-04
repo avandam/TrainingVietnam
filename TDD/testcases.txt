@@ -1,0 +1,20 @@
+Assumptions:
+- If a file is empty: error
+- If the data is incorrect: error
+- If a line is empty: error
+
+Testcases
+
+Lowest number in file
+
+File					Number	Line
+simple.txt 				1		2
+duplicate.txt			1		2 and 3
+emptyfile.txt			error: File is empty
+decimalNumber.txt		error: Decimal number found
+string.txt				error: Non-Number found
+incorrectSeparator.txt	error: Incorrect Separator
+numberTooBig.txt		error: One of the numbers is too big
+negativeNumber.txt		error: Negative number is not allowed
+						error: No file name given
+noFile.txt				error: Could not find file

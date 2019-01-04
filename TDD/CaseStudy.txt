@@ -1,0 +1,12 @@
+FIles have lines of ints, max 8 digits, no negative numbers allowed, separated by spaces
+
+Per file: 
+- Line with highest number (show line and number)
+- Line with lowest number (show line and number)
+- Line with most numbers (show line and number)
+
+Per line in file:
+- Average
+- Sum
+
+Create application that does this in a TDD way
